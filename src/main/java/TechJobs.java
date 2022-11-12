@@ -25,7 +25,7 @@ public class TechJobs {
         actionChoices.put("search", "Search");
         actionChoices.put("list", "List");
 
-        System.out.printf("Welcome to LaunchCode's TechJobs App!");
+        System.out.print("Welcome to LaunchCode's TechJobs App!");
 
         // Allow the user to search until they manually quit
         while (true) {
@@ -44,11 +44,11 @@ public class TechJobs {
 
                     ArrayList<String> results = JobData.findAll(columnChoice);
 
-                    System.out.printf("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
+                    System.out.print("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
 
                     // Print list of skills, employers, etc
                     for (String item : results) {
-                        System.out.printf(item);
+                        System.out.print(item);
                     }
                 }
 
@@ -58,7 +58,7 @@ public class TechJobs {
                 String searchField = getUserSelection("Search by:", columnChoices);
 
                 // What is their search term?
-                System.out.printf("\nSearch term:");
+                System.out.print("\nSearch term:");
                 String searchTerm = in.nextLine();
 
                 if (searchField.equals("all")) {
@@ -87,11 +87,11 @@ public class TechJobs {
 
         do {
 
-            System.out.printf("\n" + menuHeader);
+            System.out.print("\n" + menuHeader);
 
             // Print available choices
             for (int j = 0; j < choiceKeys.length; j++) {
-                System.out.printf("" + j + " - " + choices.get(choiceKeys[j]));
+                System.out.print("" + j + " - " + choices.get(choiceKeys[j]));
             }
 
             if (in.hasNextInt()) {
@@ -107,7 +107,7 @@ public class TechJobs {
 
             // Validate user's input
             if (choiceIdx < 0 || choiceIdx >= choiceKeys.length) {
-                System.out.printf("Invalid choice. Try again.");
+                System.out.print("Invalid choice. Try again.");
             } else {
                 validChoice = true;
             }
@@ -127,7 +127,7 @@ public class TechJobs {
                 for (Map.Entry<String, String> fields : job.entrySet()) {
                     System.out.print(fields.getKey() + ": " + fields.getValue());
                 }
-                // System.out.printf("printJobs is not implemented yet");
+                // System.out.print("printJobs is not implemented yet");
                 System.out.print("*****");
             }
 

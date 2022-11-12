@@ -149,7 +149,7 @@ public class JobData {
             isDataLoaded = true;
 
         } catch (IOException e) {
-            System.out.printf("Failed to load job data");
+            System.out.print("Failed to load job data");
             e.printStackTrace();
         }
     }
