@@ -25,7 +25,7 @@ public class TechJobs {
         actionChoices.put("search", "Search");
         actionChoices.put("list", "List");
 
-        System.out.print("Welcome to LaunchCode's TechJobs App!");
+        System.out.println("Welcome to LaunchCode's TechJobs App!");
 
         // Allow the user to search until they manually quit
         while (true) {
@@ -124,8 +124,8 @@ public class TechJobs {
         } else {
             for (HashMap<String, String> job : someJobs) {
                 System.out.print("\n*****");
-                for (Map.Entry<String, String> fields : job.entrySet()) {
-                    System.out.print(fields.getKey() + ": " + fields.getValue());
+                for (Map.Entry<String, String> listOfJobs : job.entrySet()) {
+                    System.out.print(listOfJobs.getKey() + ": " + listOfJobs.getValue());
                 }
                 // System.out.print("printJobs is not implemented yet");
                 System.out.print("*****");
