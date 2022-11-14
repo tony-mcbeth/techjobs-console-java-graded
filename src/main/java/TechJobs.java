@@ -44,11 +44,11 @@ public class TechJobs {
 
                     ArrayList<String> results = JobData.findAll(columnChoice);
 
-                    System.out.print("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
+                    System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
 
                     // Print list of skills, employers, etc
                     for (String item : results) {
-                        System.out.print(item);
+                        System.out.println(item);
                     }
                 }
 
@@ -87,11 +87,11 @@ public class TechJobs {
 
         do {
 
-            System.out.print("\n" + menuHeader);
+            System.out.println("\n" + menuHeader);
 
             // Print available choices
             for (int j = 0; j < choiceKeys.length; j++) {
-                System.out.print("" + j + " - " + choices.get(choiceKeys[j]));
+                System.out.println("" + j + " - " + choices.get(choiceKeys[j]));
             }
 
             if (in.hasNextInt()) {
@@ -123,9 +123,9 @@ public class TechJobs {
             System.out.print("No Results");
         } else {
             for (HashMap<String, String> job : someJobs) {
-                System.out.print("\n*****");
+                System.out.print("\n*****\n");
                 for (Map.Entry<String, String> listOfJobs : job.entrySet()) {
-                    System.out.print(listOfJobs.getKey() + ": " + listOfJobs.getValue());
+                    System.out.println(listOfJobs.getKey() + ": " + listOfJobs.getValue());
                 }
                 // System.out.print("printJobs is not implemented yet");
                 System.out.print("*****");
@@ -133,7 +133,7 @@ public class TechJobs {
 
         }
 
-        System.out.print("No Results");
+//        System.out.print("No Results");
     }
 }
 
